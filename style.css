@@ -1,0 +1,22 @@
+#item{
+    text-align: center;
+}
+button{
+    font-size: 70%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    border-radius: 10px;
+    background-color: rgb(67, 116, 113);
+}
+.item1{
+    float: left;
+    width: 100%;
+}
+img{
+    width: 390px;
+    height: 370px;
+}
+.pict{
+    width: 33%;
+    float: left;
+}

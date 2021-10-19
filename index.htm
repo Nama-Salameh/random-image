@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title> task </title>
+    </head>
+    
+    <script>
+        var randomImage = new Array();
+        randomImage[0] = "http://img.youm7.com/images/NewsPics/gallery/pics/320161514338992%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D9%85%D8%AF%D9%86-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D8%AC%D9%85%D8%A7%D9%84-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-(2).jpg";
+        randomImage[1] = "http://img.youm7.com/images/NewsPics/gallery/pics/320161514338997%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D9%85%D8%AF%D9%86-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D8%AC%D9%85%D8%A7%D9%84-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-(8).jpg";
+        randomImage[2] = "http://img.youm7.com/images/NewsPics/gallery/pics/3201615143390%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D9%85%D8%AF%D9%86-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D8%AC%D9%85%D8%A7%D9%84-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-(12).jpg";
+        randomImage[3] = "http://img.youm7.com/images/NewsPics/gallery/pics/320161514338993%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D9%85%D8%AF%D9%86-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D8%8C-%D8%AC%D9%85%D8%A7%D9%84-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-(3).jpg";
+        randomImage[4] = "https://www.fay3.com/i8ZKD8SZp/download";
+        randomImage[5] = "https://www.fay3.com/i62N003g4/download"; 
+
+        var clicks = 0;
+        function onClick() 
+        {
+            clicks += 1;
+            console.log(clicks);
+            getRandomImage(clicks);
+        }; 
+        
+        function getRandomImage(clicks)
+        {
+            var number = Math.floor(Math.random()*randomImage.length);
+            console.log(randomImage.length);
+            if(clicks == 1)
+            {
+                document.getElementById("picture1").innerHTML = '<img src="'+randomImage[number] + '"/>';
+            }
+            if(clicks ==2){
+                document.getElementById("picture2").innerHTML = '<img src="'+randomImage[number] + '"/>';
+            }
+            if(clicks ==3){
+                document.getElementById("picture3").innerHTML = '<img src="'+randomImage[number] + '"/>';
+            }
+            if(clicks ==4){
+                document.getElementById("picture4").innerHTML = '<img src="'+randomImage[number] + '"/>';
+            }
+            if(clicks ==5){
+                document.getElementById("picture5").innerHTML = '<img src="'+randomImage[number] + '"/>';
+            }
+            if(clicks ==6){
+                document.getElementById("picture6").innerHTML = '<img src="'+randomImage[number] + '"/>';
+            }
+            randomImage.splice(number,1);
+            return;
+        }
+    </script> 
+
+    <body>
+        <div id="container">
+        <p>Nama' Salameh</p>
+        <h1 id="item" > <button onclick = "onClick()"> generator </button> </h1>
+        <div class="item1">
+            <p id="picture1" class="pict"></p>
+            <p id="picture2" class="pict"></p>
+            <p id="picture3" class="pict"></p>
+        </div>
+        <div class="item1">
+            <p id="picture4" class="pict"></p>
+            <p id="picture5" class="pict"></p>
+            <p id="picture6" class="pict"></p>
+        </div>
+        </div>
+    </body>
+</html>
